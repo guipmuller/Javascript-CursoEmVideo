@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 255, 0.552);
+            color: white;
+            font: normal 25pt Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+        /* comentário em CSS */
+    </style>
+</head>
+<body>
+    <h1>Ola mundo</h1>
+    <!-- comentário em html -->
+    <script>
+        var n1 = Number(window.prompt('Digite o primeiro número'));
+        var n2 = Number(window.prompt('Digite o segundo número'));
+        var s = n1 + n2
+        alert('A soma é ' + s)
+        // conversão de número para String pode ser por String(n) ou n.toString()
+        // para usar template string se usa crases para a sentença e
+        // placeholder + chaves para as variáveis
+        // n.length mostra o tamanho da variável, n.toUpperCase() converte para
+        // maiúsculas, enquanto n.toLowerCase() joga para minúsculas
+        alert(`A soma entre ${n1} e ${n2} é ${s}`)
+    </script>
+</body>
+</html>

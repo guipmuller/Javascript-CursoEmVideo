@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            color: orangered;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        /* OPERADORES ARITMETICOS
+            + adicao
+            - subtracao
+            * multiplicacao
+            / divisao real
+            % resto da divisao inteira
+            ** potenciacao
+        */
+        /* OPERADORES RELACIONAIS
+            > maior que
+            < menor que
+            >= maior igual a 
+            <= menor igual a
+            == igual a
+            != diferente de
+        OPERADOR DE IDENTIDADE RESTRITA
+            === testa igualdade
+            ex: 5 == '5' - true
+            ex: 5 === '5' - false
+        */
+        /* OPERADORES LOGICOS
+            ! negação
+            && conjunção AND
+            || disjunção OR
+        */
+        /* PRECEDENCIA DE OPERADORES
+            1º aritmeticos
+            2º relacionais
+            3º lógicos (1º ! 2º && 3º ||)
+        */
+        /* OPERADOR TERNARIO
+            condição ? resultado caso verdadeiro : caso falso
+        */
+       
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras</br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}</br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}</br>`)
+        // n.toFixed(casas) para casas decimais
+        var n1 = Number(window.prompt('Digite o valor'))
+        document.write(n1.toFixed(3) + '</br>')
+        // para mostrar virgula ao inves de ponto
+        document.write(n1.toFixed(2).replace('.',',') + '</br>')
+        // para mostrar em moedas locais
+        document.write(n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) + '</br>')
+        document.write(n1.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'}) + '</br>')
+        document.write(n1.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'}) + '</br>')
+    </script>    
+</body>
+</html>
