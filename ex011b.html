@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudações</title>
+    <style>
+        input#hora{
+            width: 30px;
+        }
+        div#resultado {
+            background-color: rgb(11, 4, 103);
+            color: whitesmoke;
+        }
+        body {
+            background-color: rgb(4, 4, 44);
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando Saudações</h1>
+    Digite apenas a hora atual (sem minutos): <input type="number" id="hora">
+    <input type="button" value="Entrar" onclick="saudar()">
+    <p></p>
+    Ou clique <input type="button" value="Aqui!" onclick="saudaratual()"> para a hora do sistema
+    <div id="resultado"></div>
+    <script>
+        function saudar() {
+            var hora = window.document.getElementById('hora')
+            var resultado = window.document.getElementById('resultado')
+            var valor = Number(hora.value)
+            resultado.innerHTML = `<p>Agora são ${valor} horas</p>`
+            if (valor < 0 || valor >= 24) {
+            resultado.innerHTML += `${valor} não é uma hora válida`
+            } else if (valor < 6) {
+                resultado.innerHTML += `<p><strong>Boa madrugada!</strong></p>`
+            } else if (valor <= 12) {
+                resultado.innerHTML += `<p><strong>Bom dia!</strong></p>`
+            } else if (valor <= 18) {
+                resultado.innerHTML += `<p><strong>Boa tarde!</strong></p>`
+            } else if (valor <= 23) {
+                resultado.innerHTML += `<p><strong>Boa noite!</strong></p>`
+            }
+        }
+        function saudaratual() {
+            var hora = new Date()
+            var resultado = window.document.getElementById('resultado')
+            var valor = hora.getHours()
+            resultado.innerHTML = `<p>Agora são ${valor} horas</p>`
+            if (valor < 0 || valor >= 24) {
+            resultado.innerHTML += `${valor} não é uma hora válida`
+            } else if (valor < 6) {
+                resultado.innerHTML += `<p><strong>Boa madrugada!</strong></p>`
+            } else if (valor <= 12) {
+                resultado.innerHTML += `<p><strong>Bom dia!</strong></p>`
+            } else if (valor <= 18) {
+                resultado.innerHTML += `<p><strong>Boa tarde!</strong></p>`
+            } else if (valor <= 23) {
+                resultado.innerHTML += `<p><strong>Boa noite!</strong></p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

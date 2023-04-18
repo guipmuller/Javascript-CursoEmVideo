@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+    <style>
+        body {
+            background-color: black;
+            color: wheat;
+        }
+        div {
+            background-color: wheat;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Categoria de voto</h1>
+    Digite sua idade: <input type="number" id="idade">
+    <input type="button" value="Inserir" onclick="calcular()">
+    <div id="resultado"></div>
+    <script>
+        function calcular() {
+            var txtidade = window.document.getElementById('idade')
+            var txtresultado = window.document.getElementById('resultado')
+            var id = Number(txtidade.value)
+            txtresultado.innerHTML = `<p> Você digitou ${id}, portanto sua condição de voto é: </p>`
+            if (id < 16) {
+                txtresultado.innerHTML += `<p><strong>Inapto a votar</strong></p>`
+            } else if (id < 18 || id >= 65) {
+                txtresultado.innerHTML += `<p><strong>Voto opcional</strong></p>`
+            } else {
+                txtresultado.innerHTML += `<p><strong>Voto obrigatório</strong></p>`
+            }
+        }
+    </script>    
+</body>
+</html>

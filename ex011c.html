@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+    <style>
+        body {
+            background-color: rgb(121, 0, 0);
+            color: white;
+        }
+        div#resultado {
+            background-color: rgb(51, 0, 0);
+            font-size: 24px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+    Clique <input type="button" value="Aqui" onclick="dia()"> para revelar que dia é hoje
+    <p></p>
+    <div id="resultado"></div>
+    <script>
+        function dia() {
+            var data = new Date()
+            var dia_sem = data.getDay()
+            var resultado = document.getElementById('resultado')
+            switch (dia_sem) {
+                case 0:
+                    resultado.innerText = "domingp"
+                    break;
+                case 1:
+                    resultado.innerText = "segunda"
+                    break;
+                case 2:
+                    resultado.innerText = "terça"
+                    break;
+                case 3:
+                    resultado.innerText = "quarta"
+                    break;
+                case 4:
+                    resultado.innerText = "quinta"
+                    break;
+                case 5:
+                    resultado.innerText = "sexta"
+                    break;
+                case 6:
+                    resultado.innerText = "sabado"
+                    break;
+                default:
+                    resultado.innerText = "dia invalido"
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
